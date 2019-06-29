@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="SystemUsers_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="StoredPassword" PropertyEditorType="DevExpress.ExpressApp.Win.Editors.StringPropertyEditor" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SystemUsers">
+              <LayoutGroup Id="SystemUsers_col1" Index="1" RelativeSize="19.980019980019978" Caption="SystemUsers_col1" TextAlignMode="UseParentOptions" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="IsActive" RelativeSize="100" Index="0" Removed="True" />
+                <LayoutItem Id="UserName" RelativeSize="65.957446808510639" Index="0" Removed="True" />
+                <LayoutItem Id="employee" RelativeSize="32.4468085106383" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="SystemUsers_col2" Caption="SystemUsers_col2" TextAlignMode="UseParentOptions" Index="1" RelativeSize="40.059940059940061" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="ChangePasswordOnFirstLogon" RelativeSize="100" Removed="True" />
+                <LayoutItem Id="StoredPassword" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item1">
+                <LayoutItem Id="StoredPassword" ViewItem="StoredPassword" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

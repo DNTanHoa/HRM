@@ -1,0 +1,750 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Logo="ExpressAppLogo" Company="Công ty TNHH ......" Copyright="" Title="Hệ Thống Quản Lý Nhân Sự">
+  <ActionDesign>
+    <Actions>
+      <Action Id="About Info" Caption="Về Chúng Tôi" />
+      <Action Id="AddFromFile" Caption="Thêm Từ Thư Mực...." />
+      <Action Id="Cancel" Caption="Thoát" />
+      <Action Id="CancelAction" Caption="Thoát" ImageName="Action_Cancel" />
+      <Action Id="ChangePasswordByUser" Caption="Thay Đổi Mật Khẩu" />
+      <Action Id="ChooseSkin" Caption="Lựa Chọn Giao Diện" />
+      <Action Id="Close" Caption="Đóng" />
+      <Action Id="ConfigureSkin" Caption="Hiệu Chỉnh Giao Diện" />
+      <Action Id="CopyCellValue" Caption="Sao Chép Nội Dung Ô" />
+      <Action Id="CreateDashboard" Caption="Tạo Thống Kê" />
+      <Action Id="Delete" Caption="Xóa" ConfirmationMessage="Bạn Chắc Chắn Muốn Xóa" />
+      <Action Id="Delete Item" Caption="Xóa Nội Dung" ConfirmationMessage="Bạn Chắc Chắn Muốn Xóa?" />
+      <Action Id="DialogCancel" Caption="Thoát" ImageName="Action_Cancel" />
+      <Action Id="DialogClose" Caption="Đóng" />
+      <Action Id="DialogOK" Caption="Xác Nhận" />
+      <Action Id="EditModel" Caption="Chỉnh Sửa Giao Diện" />
+      <Action Id="Exit" Caption="Thoát" />
+      <Action Id="Export" Caption="Xuất Thành" />
+      <Action Id="ExportAnalysis" Caption="Xuất Phân Tích Thành" />
+      <Action Id="FullTextSearch" Caption="Tìm Kiếm Thông Tin" NullValuePrompt="Nội dung tìm kiếm...." ToolTip="Tìm Kiếm Nội Dung" />
+      <Action Id="Link" Caption="Bổ Sung" />
+      <Action Id="ListViewShowObject" Caption="Mở" />
+      <Action Id="Logoff" Caption="Đăng Xuất" />
+      <Action Id="Logon" Caption="Đăng Nhập" ImageName="Travel_DoorHanger" />
+      <Action Id="NavigateForward" Caption="Tới" />
+      <Action Id="New" Caption="Thêm Mới" />
+      <Action Id="NextObject" Caption="Tiếp Theo" />
+      <Action Id="Open" Caption="Mở..." />
+      <Action Id="OpenObject" Caption="Mở Đối Tượng....." />
+      <Action Id="Print" Caption="In....." />
+      <Action Id="Refresh" Caption="Tải Lại" />
+      <Action Id="ResetPassword" Caption="Khôi Phục Lại Mật Khẩu" />
+      <Action Id="ResetViewSettings" Caption="Khôi Phục Gốc" ConfirmationMessage="Bạn Có Chắc Thay Đổi?" />
+      <Action Id="Save" Caption="Lưu Lại" />
+      <Action Id="SaveAndClose" Caption="Lưu Và Đóng" />
+      <Action Id="SaveAndNew" Caption="Lưu Và Tạo Mới" />
+      <Action Id="SaveTo" Caption="Lưu Như...." />
+      <Action Id="Unlink" Caption="Loại Bỏ...." ConfirmationMessage="Bạn Có Chắc Chắn Loại Bỏ Nội Dung?" />
+    </Actions>
+  </ActionDesign>
+  <NavigationItems NavigationStyle="Accordion" ShowImages="True" DefaultChildItemsDisplayStyle="List">
+    <Items>
+      <Item Id="Home" Caption="Trang Chủ" Index="0" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="LogInDetail" Caption="Thông Tin Đăng Nhập" ImageName="BO_MyDetails" ViewId="SystemUsers_ListView" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="Employees" Caption="Nhân Viên" ImageName="BO_Person" Index="1" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="ListEmployee" Caption="Danh Sách Nhân Viên" ImageName="BO_Department" ViewId="Employees_ListView" Index="0" IsNewNode="True" />
+          <Item Id="Department" Caption="Bộ Phận" ImageName="BO_Category" ViewId="Departments_ListView" Index="1" IsNewNode="True" />
+          <Item Id="Groups" Caption="Tổ" ImageName="Group" ViewId="Groups_ListView" Index="2" IsNewNode="True" />
+          <Item Id="LaborGroups" Caption="Nhóm Lao Động" ImageName="DataLabels" ViewId="Labors_ListView" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="WorkingTime" Caption="Giờ Công" ImageName="BO_Audit_ChangeHistory" Index="2" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="@abc541ce-ed42-4d41-b2cb-adcefc6ae011" Caption="Tăng Ca" ImageName="SwitchTimeScalesTo" ViewId="" IsNewNode="True">
+            <Items IsNewNode="True">
+              <Item Id="Overtimes" Caption="Phiếu Tăng Ca" ImageName="BO_Audit_ChangeHistory" ViewId="OverTimes_ListView" IsNewNode="True" />
+              <Item Id="OvertimeType" Caption="Loại Tăng Ca" ImageName="ItemTypeChecked" ViewId="OvertimeTypes_ListView" IsNewNode="True" />
+            </Items>
+          </Item>
+          <Item Id="Shifts" Caption="Ca Làm Việc" ImageName="CalculateSheet" ViewId="Shifts_ListView" IsNewNode="True" />
+          <Item Id="Vacations" Caption="Lần Nghỉ" ImageName="AddQuery" ViewId="Vacations_ListView" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="Identifications" Caption="Hồ Sơ" ImageName="SelectTableCell" Index="3" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="Contracts" Caption="Hợp Đồng" ImageName="AddParagraphToTableOfContents" ViewId="Contracts_ListView" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="Recruiment" Caption="Tuyển Dụng" ImageName="BO_KPI_Definition" Index="4" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="Candidates" Caption="Ứng Viên" ImageName="BO_Contact" ViewId="Candidates_ListView" IsNewNode="True" />
+          <Item Id="RecruimentRequirement" Caption="Yêu Cầu" ImageName="BO_Position" ViewId="Recruitments_ListView" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options UIType="MultipleWindowSDI" FormStyle="Ribbon" ShowTabImage="False" Palette="Amber">
+    <LayoutManagerOptions EnableLayoutGroupImages="False" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="19.1.4.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="19.1.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="AuthenticationStandardLogonParameters_DetailView" EnableLayoutGroupImages="True" Caption="Đăng Nhập" ImageName="logon_36x36" DefaultFocusedItem="Password">
+      <Items>
+        <StaticImage Id="LogonImage" ImageName="logo" />
+        <StaticText Id="LogonText" Text="Hệ Thống Quản Lý Nhân Sự. Vui Lòng Đăng Nhập" />
+        <PropertyEditor Id="Password" Caption="Mật Khẩu" />
+        <PropertyEditor Id="UserName" Caption="Tên Đăng Nhập" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Candidates_DetailView" EnableLayoutGroupImages="True">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="33.855185909980428">
+            <LayoutGroup Id="Candidates" Caption="Thông Tin Chung" RelativeSize="100" ImageName="BO_Contact">
+              <LayoutGroup Id="Candidates_col1" RelativeSize="49.930069930069934">
+                <LayoutItem Id="fullName" RelativeSize="28.571428571428573" />
+                <LayoutItem Id="phoneNumber" RelativeSize="20.634920634920636" />
+                <LayoutItem Id="email" RelativeSize="20.634920634920636" />
+                <LayoutItem Id="position" RelativeSize="30.158730158730158" />
+                <LayoutItem Id="recruitment" RelativeSize="24.342105263157894" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Candidates_col2" RelativeSize="50.069930069930066">
+                <LayoutItem Id="applyDate" RelativeSize="29.365079365079364" />
+                <LayoutItem Id="resume" RelativeSize="20.634920634920636" />
+                <LayoutItem Id="candidateStatus" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="note" RelativeSize="28.571428571428573" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="1" RelativeSize="14.87279843444227" Caption="Thông Tin Đợt Tuyển" TextAlignMode="AlignWithChildren" ImageName="BO_Transition" IsNewNode="True">
+            <LayoutItem Id="recruitment" ViewItem="recruitment" Index="0" RelativeSize="100" ShowCaption="False" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="workingHistories_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="51.2720156555773" Index="2" ImageName="BO_Audit_ChangeHistory">
+            <LayoutItem Id="workingHistories" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Contracts_DetailView" EnableLayoutGroupImages="True">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="58.720930232558139">
+            <LayoutGroup Id="Contracts" Caption="Thông Tin Chung" RelativeSize="63.366336633663366" ImageName="InsertTableOfContents">
+              <LayoutGroup Id="Contracts_col1" RelativeSize="49.93045897079277">
+                <LayoutItem Id="employee" RelativeSize="24.183006535947712" />
+                <LayoutItem Id="code" RelativeSize="16.993464052287582" />
+                <LayoutItem Id="position" ViewItem="position" Index="2" RelativeSize="17.647058823529413" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="contractType" RelativeSize="17.647058823529413" Index="3" />
+                <LayoutItem Id="signDate" RelativeSize="15" Index="3" Removed="True" />
+                <LayoutItem Id="duration" RelativeSize="23.529411764705884" Index="4" />
+              </LayoutGroup>
+              <LayoutGroup Id="Contracts_col2" RelativeSize="50.06954102920723">
+                <LayoutItem Id="signDate" ViewItem="signDate" Index="0" RelativeSize="24.183006535947712" IsNewNode="True" />
+                <LayoutItem Id="endDate" RelativeSize="17.647058823529413" Index="2" />
+                <LayoutItem Id="salary" RelativeSize="16.993464052287582" Index="3" />
+                <LayoutItem Id="insurance" RelativeSize="23.529411764705884" Index="4" />
+                <LayoutItem Id="title" RelativeSize="35.555555555555557" Index="4" Removed="True" />
+                <LayoutItem Id="representative" RelativeSize="15" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="1" RelativeSize="36.633663366336634" Caption="Người Đại Diện Ký" ImageName="BO_Position" IsNewNode="True">
+              <LayoutItem Id="representative" ViewItem="representative" Index="0" RelativeSize="50" IsNewNode="True" />
+              <LayoutItem Id="title" ViewItem="title" Index="1" RelativeSize="50" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="contractAppendixs_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="41.279069767441861" Index="1" ImageName="AddFile">
+            <LayoutItem Id="contractAppendixs" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Departments_DetailView" EnableLayoutGroupImages="True" GroupStyle="Card">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="31.559633027522935">
+            <LayoutGroup Id="Departments" RelativeSize="100">
+              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="Thông Tin Chung" ImageName="BO_Note" IsNewNode="True">
+                <LayoutItem Id="name" ViewItem="name" Index="0" RelativeSize="28.8" IsNewNode="True" />
+                <LayoutItem Id="code" ViewItem="code" Index="1" RelativeSize="20.8" IsNewNode="True" />
+                <LayoutItem Id="departmentHead" ViewItem="departmentHead" Index="2" RelativeSize="21.6" IsNewNode="True" />
+                <LayoutItem Id="note" ViewItem="note" Index="3" RelativeSize="28.8" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="departmentHead" RelativeSize="15.697674418604651" Index="1" Removed="True" />
+              <LayoutItem Id="note" RelativeSize="19.767441860465116" Index="1" Removed="True" />
+              <LayoutItem Id="code" RelativeSize="15.116279069767442" Removed="True" />
+              <LayoutItem Id="name" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="68.440366972477065">
+            <LayoutGroup Id="groups" TextAlignMode="AlignWithChildren" RelativeSize="100" ImageName="GroupByResource">
+              <LayoutItem Id="groups" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="emmployees" TextAlignMode="AlignWithChildren" RelativeSize="100" ImageName="BO_Department">
+              <LayoutItem Id="emmployees" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Departments_emmployees_ListView">
+      <Columns>
+        <ColumnInfo Id="fullName" Width="200" />
+        <ColumnInfo Id="contentOfPhoto" Removed="True" />
+        <ColumnInfo Id="countryside" Removed="True" />
+        <ColumnInfo Id="dateOfBirth" Removed="True" />
+        <ColumnInfo Id="department" Removed="True" />
+        <ColumnInfo Id="health" Removed="True" />
+        <ColumnInfo Id="labor" Removed="True" />
+        <ColumnInfo Id="note" Removed="True" />
+        <ColumnInfo Id="permanentAddress" Removed="True" />
+        <ColumnInfo Id="photo" Removed="True" />
+        <ColumnInfo Id="relationshipStatus" Removed="True" />
+        <ColumnInfo Id="religion" Removed="True" />
+        <ColumnInfo Id="seniority" Removed="True" />
+        <ColumnInfo Id="startDate" Removed="True" />
+        <ColumnInfo Id="temporaryAddress" Removed="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="Departments_groups_ListView">
+      <Columns>
+        <ColumnInfo Id="department" Width="82" />
+        <ColumnInfo Id="Oid" Width="82" />
+        <ColumnInfo Id="manager" Width="82" />
+        <ColumnInfo Id="note" Width="82" />
+      </Columns>
+    </ListView>
+    <ListView Id="Departments_ListView" ImageName="BO_Category" />
+    <DetailView Id="EmployeeRole_DetailView" EnableLayoutGroupImages="True">
+      <Items>
+        <PropertyEditor Id="CanEditModel" Caption="Có Quyền Hiệu Chỉnh" />
+        <PropertyEditor Id="IsAdministrative" Caption="Là Quản Trị Viên" />
+        <PropertyEditor Id="Name" Caption="Quyền Truy Cập" />
+        <PropertyEditor Id="PermissionPolicy" Caption="Chính Sách Bảo Mật" />
+        <PropertyEditor Id="TypePermissions" Caption="Đối Tượng Cho Phép" />
+        <PropertyEditor Id="users" Caption="Danh Sách Người Dùng" />
+        <PropertyEditor Id="Users" Caption="Danh Sách Người Dùng" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="26.363636363636363">
+            <LayoutGroup Id="PermissionPolicyRoleBase" Index="0" RelativeSize="100">
+              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="Thông Tin Chung" ImageName="BO_Category" IsNewNode="True">
+                <LayoutItem Id="Name" ViewItem="Name" Index="0" RelativeSize="36.734693877551024" IsNewNode="True" />
+                <LayoutItem Id="PermissionPolicy" ViewItem="PermissionPolicy" Index="1" RelativeSize="27.551020408163264" IsNewNode="True" />
+                <LayoutGroup Id="Autof14aa5a9-63a2-4ec9-bc2d-01127471e0b2" ShowCaption="False" Caption="" Direction="Horizontal" Index="2" RelativeSize="35.714285714285715" IsNewNode="True">
+                  <LayoutItem Id="IsAdministrative" ViewItem="IsAdministrative" Index="0" RelativeSize="50" IsNewNode="True" />
+                  <LayoutItem Id="CanEditModel" ViewItem="CanEditModel" Index="1" RelativeSize="50" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutItem Id="PermissionPolicy" Index="1" RelativeSize="22.314049586776861" Removed="True" />
+              <LayoutItem Id="IsAdministrative" Index="2" RelativeSize="20.66115702479339" Removed="True" />
+              <LayoutItem Id="CanEditModel" Index="3" RelativeSize="27.272727272727273" Removed="True" />
+              <LayoutItem Id="Name" RelativeSize="29.75206611570248" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="73.63636363636364">
+            <LayoutGroup Id="users" TextAlignMode="AlignWithChildren" RelativeSize="100" ImageName="BO_Department">
+              <LayoutItem Id="users" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="TypePermissions" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="1">
+              <LayoutItem Id="TypePermissions" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="NavigationPermissions" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="2" Caption="Cho Phép Theo Điều Hướng">
+              <LayoutItem Id="NavigationPermissions" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Users" TextAlignMode="AlignWithChildren" RelativeSize="100" Removed="True">
+              <LayoutItem Id="Users" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Employees_decisions_ListView">
+      <Columns>
+        <ColumnInfo Id="title" Width="156" />
+        <ColumnInfo Id="decisionDate" Width="94" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Employees_DetailView" EnableLayoutGroupImages="True" FreezeLayout="True" ImageName="BO_Contact">
+      <Layout IsNewNode="True" Removed="True">
+        <LayoutGroup Id="Main" Index="0" ShowCaption="False" RelativeSize="100" IsNewNode="True">
+          <LayoutGroup Id="SimpleEditors" Index="0" ShowCaption="False" RelativeSize="100" Direction="Vertical" IsNewNode="True">
+            <TabbedGroup Id="Item4" CaptionLocation="Top" Index="0" RelativeSize="98.579545454545453" IsNewNode="True">
+              <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="0" Caption="Thông Tin Nhân Viên" ImageName="BO_Contact" RelativeSize="100" TextAlignMode="UseParentOptions" IsNewNode="True">
+                <LayoutGroup Id="Auto3f9c4a2c-b6b3-4dc7-9011-f6537cb51a3a" ShowCaption="False" Caption="Auto3f9c4a2c-b6b3-4dc7-9011-f6537cb51a3a(5)" Direction="Horizontal" Index="0" RelativeSize="67.751937984496124" IsNewNode="True">
+                  <LayoutGroup Id="Autod618ea94-49ee-4896-b780-0bf725c6859f" ShowCaption="False" Caption="Autod618ea94-49ee-4896-b780-0bf725c6859f(6)" Index="0" RelativeSize="53.347502656748141" IsNewNode="True">
+                    <LayoutGroup Id="Item3" ShowCaption="True" Caption="Thông Tin Cơ Bản" CaptionLocation="Top" Index="0" RelativeSize="73.6842105263158" IsNewNode="True">
+                      <LayoutItem Id="fullName" ViewItem="fullName" Index="0" RelativeSize="12.720848056537102" IsNewNode="True" />
+                      <LayoutItem Id="gender" ViewItem="gender" Index="1" RelativeSize="9.5406360424028271" IsNewNode="True" />
+                      <LayoutItem Id="employeeCode" ViewItem="employeeCode" Index="2" RelativeSize="9.1872791519434625" IsNewNode="True" />
+                      <LayoutItem Id="cardCode" ViewItem="cardCode" Index="3" RelativeSize="9.1872791519434625" IsNewNode="True" />
+                      <LayoutItem Id="dateOfBirth" ViewItem="dateOfBirth" Index="4" RelativeSize="9.5406360424028271" IsNewNode="True" />
+                      <LayoutItem Id="countryside" ViewItem="countryside" Index="5" RelativeSize="9.1872791519434625" IsNewNode="True" />
+                      <LayoutItem Id="temporaryAddress" ViewItem="temporaryAddress" Index="6" RelativeSize="9.1872791519434625" IsNewNode="True" />
+                      <LayoutItem Id="startDate" ViewItem="startDate" Index="7" RelativeSize="9.5406360424028271" IsNewNode="True" />
+                      <LayoutItem Id="permanentAddress" ViewItem="permanentAddress" Index="8" RelativeSize="9.1872791519434625" IsNewNode="True" />
+                      <LayoutItem Id="note" ViewItem="note" Index="9" RelativeSize="12.720848056537102" IsNewNode="True" />
+                    </LayoutGroup>
+                    <SplitterItem Id="SplitterItem2" Index="1" RelativeSize="1.3729977116704806" IsNewNode="True" />
+                    <LayoutGroup Id="Item7" ShowCaption="True" Caption="Thông Tin Liên Lạc" CaptionLocation="Top" Index="2" RelativeSize="24.94279176201373" IsNewNode="True">
+                      <LayoutItem Id="phoneNumber" ViewItem="phoneNumber" Index="0" RelativeSize="50" IsNewNode="True" />
+                      <LayoutItem Id="email" ViewItem="email" Index="1" RelativeSize="50" IsNewNode="True" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                  <LayoutGroup Id="Auto9598c034-6cd3-4a82-b387-c31fa896bfd1" ShowCaption="False" Caption="Auto9598c034-6cd3-4a82-b387-c31fa896bfd1(22)" Direction="Horizontal" Index="1" RelativeSize="46.652497343251859" IsNewNode="True">
+                    <SplitterItem Id="SplitterItem1" Index="0" RelativeSize="1.3667425968109339" IsNewNode="True" />
+                    <LayoutGroup Id="Auto023bb759-b5ba-4fed-ad7e-bd95b55c2d30" ShowCaption="False" Caption="Auto023bb759-b5ba-4fed-ad7e-bd95b55c2d30(24)" Index="1" RelativeSize="98.633257403189063" IsNewNode="True">
+                      <LayoutGroup Id="Item6" ShowCaption="True" Caption="Hình Ảnh" CaptionLocation="Top" TextAlignMode="AlignWithChildren" Index="0" RelativeSize="73.6842105263158" IsNewNode="True">
+                        <LayoutItem Id="photo" ShowCaption="False" ViewItem="photo" Index="0" RelativeSize="100" IsNewNode="True" />
+                      </LayoutGroup>
+                      <SplitterItem Id="SplitterItem6" Index="1" RelativeSize="1.3729977116704806" IsNewNode="True" />
+                      <LayoutGroup Id="Item15" ShowCaption="True" CaptionLocation="Top" Index="2" RelativeSize="24.94279176201373" Caption="Thông Tin Phúc Lợi" IsNewNode="True">
+                        <LayoutItem Id="salary" ViewItem="salary" Index="0" RelativeSize="50" IsNewNode="True" />
+                        <LayoutItem Id="vacation" ViewItem="vacation" Index="1" RelativeSize="50" IsNewNode="True" />
+                      </LayoutGroup>
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="Autocb066891-8a90-4b2e-9300-5ec3d7ddc2b5" ShowCaption="False" Caption="Autocb066891-8a90-4b2e-9300-5ec3d7ddc2b5(27)" Direction="Horizontal" Index="1" RelativeSize="32.248062015503876" IsNewNode="True">
+                  <LayoutGroup Id="Auto7a644997-6cb3-43de-928a-42e5c3032be9" ShowCaption="False" Caption="Auto7a644997-6cb3-43de-928a-42e5c3032be9(28)" Index="0" RelativeSize="53.8788522848034" IsNewNode="True">
+                    <SplitterItem Id="SplitterItem3" Index="0" RelativeSize="2.8846153846153846" IsNewNode="True" />
+                    <LayoutGroup Id="Autod00ab6fa-1189-42ad-9b38-9143e031ef12" ShowCaption="False" Caption="Autod00ab6fa-1189-42ad-9b38-9143e031ef12(30)" Direction="Horizontal" Index="1" RelativeSize="97.115384615384613" IsNewNode="True">
+                      <LayoutGroup Id="Item8" ShowCaption="True" Caption="Vị Trí Công Việc" CaptionLocation="Top" Index="0" RelativeSize="98.816568047337284" IsNewNode="True">
+                        <LayoutItem Id="labor" ViewItem="labor" Index="0" RelativeSize="23.870967741935484" IsNewNode="True" />
+                        <LayoutItem Id="shift" ViewItem="shift" Index="1" RelativeSize="17.419354838709676" IsNewNode="True" />
+                        <LayoutItem Id="position" ViewItem="position" Index="2" RelativeSize="17.419354838709676" IsNewNode="True" />
+                        <LayoutItem Id="department" ViewItem="department" Index="3" RelativeSize="17.419354838709676" IsNewNode="True" />
+                        <LayoutItem Id="group" ViewItem="group" Index="4" RelativeSize="23.870967741935484" IsNewNode="True" />
+                      </LayoutGroup>
+                      <SplitterItem Id="SplitterItem4" Index="1" RelativeSize="1.1834319526627219" IsNewNode="True" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                  <LayoutGroup Id="Auto6a00c690-6a30-4b19-8299-dbef9ffb811c" ShowCaption="False" Caption="Auto6a00c690-6a30-4b19-8299-dbef9ffb811c(42)" Index="1" RelativeSize="46.1211477151966" IsNewNode="True">
+                    <SplitterItem Id="SplitterItem5" Index="0" RelativeSize="2.8846153846153846" IsNewNode="True" />
+                    <LayoutGroup Id="Item9" ShowCaption="True" Caption="Thông Tin Phụ" CaptionLocation="Top" Index="1" RelativeSize="97.115384615384613" IsNewNode="True">
+                      <LayoutItem Id="health" ViewItem="health" Index="0" RelativeSize="22.085889570552148" IsNewNode="True" />
+                      <LayoutItem Id="seniority" ViewItem="seniority" Index="1" RelativeSize="15.950920245398773" IsNewNode="True" />
+                      <LayoutItem Id="relationshipStatus" ViewItem="relationshipStatus" Index="2" RelativeSize="16.564417177914109" IsNewNode="True" />
+                      <LayoutItem Id="religion" ViewItem="religion" Index="3" RelativeSize="45.398773006134967" IsNewNode="True" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item5" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="1" Caption="Quan Hệ Gia Đình" TextAlignMode="AlignWithChildren" RelativeSize="100" ImageName="BO_Category" IsNewNode="True">
+                <LayoutItem Id="familyRelationships" ViewItem="familyRelationships" Index="0" RelativeSize="100" TextAlignMode="AutoSize" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="2" Caption="Hợp Đồng" TextAlignMode="AlignWithChildren" RelativeSize="100" ImageName="BO_Contract" IsNewNode="True">
+                <LayoutItem Id="contracts" ViewItem="contracts" Index="0" RelativeSize="100" TextAlignMode="AutoSize" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item11" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="3" Caption="Bằng Cấp" ImageName="BO_KPI_Definition" TextAlignMode="AlignWithChildren" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="degrees" ViewItem="degrees" Index="0" RelativeSize="100" TextAlignMode="AutoSize" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item12" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="4" Caption="Giấy Tờ" ImageName="BO_Report" TextAlignMode="AlignWithChildren" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="identifications" ViewItem="identifications" Index="0" RelativeSize="100" TextAlignMode="AutoSize" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item13" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="5" Caption="Khen Thưởng / Kỷ Luật" ImageName="OpenCalendar" TextAlignMode="AlignWithChildren" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="decisions" ViewItem="decisions" Index="0" RelativeSize="100" TextAlignMode="AutoSize" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item14" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="6" Caption="Tăng Ca" TextAlignMode="AlignWithChildren" RelativeSize="100" ImageName="ChartTitleCenteredOverlay" IsNewNode="True">
+                <LayoutItem Id="overtimes" ViewItem="overtimes" Index="0" RelativeSize="100" TextAlignMode="AutoSize" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item16" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="7" Caption="Lần Nghỉ" TextAlignMode="AlignWithChildren" RelativeSize="100" ImageName="ShowAllFieldCodes" IsNewNode="True">
+                <LayoutItem Id="vacations" ViewItem="vacations" Index="0" RelativeSize="100" TextAlignMode="AutoSize" IsNewNode="True" />
+              </LayoutGroup>
+            </TabbedGroup>
+            <LayoutItem Id="Item10" Index="1" RelativeSize="1.4204545454545454" IsNewNode="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Employees_familyRelationships_ListView" NewItemRowPosition="Bottom" AllowEdit="True">
+      <Columns>
+        <ColumnInfo Id="kindOfRelationship" Width="127" />
+        <ColumnInfo Id="phone" Width="138" />
+        <ColumnInfo Id="address" Width="122" />
+        <ColumnInfo Id="note" Width="121" />
+      </Columns>
+    </ListView>
+    <ListView Id="Employees_ListView" ImageName="BO_MyDetails">
+      <Columns>
+        <ColumnInfo Id="contentOfPhoto" Removed="True" />
+        <ColumnInfo Id="countryside" Removed="True" />
+        <ColumnInfo Id="dateOfBirth" Removed="True" />
+        <ColumnInfo Id="health" Removed="True" />
+        <ColumnInfo Id="labor" Removed="True" />
+        <ColumnInfo Id="note" Removed="True" />
+        <ColumnInfo Id="Oid" Removed="True" />
+        <ColumnInfo Id="permanentAddress" Removed="True" />
+        <ColumnInfo Id="photo" Removed="True" />
+        <ColumnInfo Id="relationshipStatus" Removed="True" />
+        <ColumnInfo Id="religion" Removed="True" />
+        <ColumnInfo Id="salary" Removed="True" />
+        <ColumnInfo Id="shift" Removed="True" />
+        <ColumnInfo Id="startDate" Removed="True" />
+        <ColumnInfo Id="temporaryAddress" Removed="True" />
+        <ColumnInfo Id="vacation" Removed="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Groups_DetailView" EnableLayoutGroupImages="True">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="38.356164383561641">
+            <LayoutGroup Id="Groups" RelativeSize="57.142857142857146" Caption="Thông Tin Chung" ImageName="ShowLegend">
+              <LayoutGroup Id="Groups_col1" RelativeSize="50">
+                <LayoutItem Id="manager" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Groups_col2" RelativeSize="50">
+                <LayoutItem Id="department" RelativeSize="50.684931506849317" />
+                <LayoutItem Id="note" RelativeSize="49.315068493150683" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="1" RelativeSize="42.857142857142854" Caption="Quản Lý" TextAlignMode="AlignWithChildren" ImageName="BO_Position" IsNewNode="True">
+              <LayoutItem Id="manager" ViewItem="manager" Index="0" RelativeSize="100" ShowCaption="False" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="employees_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="61.643835616438359" ImageName="BO_Department">
+            <LayoutItem Id="employees" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Groups_employees_ListView">
+      <Columns>
+        <ColumnInfo Id="fullName" Width="211" />
+        <ColumnInfo Id="employeeCode" Width="96" />
+        <ColumnInfo Id="cardCode" Width="96" />
+        <ColumnInfo Id="phoneNumber" Width="96" />
+        <ColumnInfo Id="email" Width="96" />
+        <ColumnInfo Id="gender" Width="96" />
+        <ColumnInfo Id="dateOfBirth" Width="96" />
+        <ColumnInfo Id="position" Width="96" />
+        <ColumnInfo Id="startDate" Width="96" />
+        <ColumnInfo Id="seniority" Width="68" />
+        <ColumnInfo Id="contentOfPhoto" Width="82" Removed="True" />
+        <ColumnInfo Id="countryside" Width="82" Removed="True" />
+        <ColumnInfo Id="department" Width="82" Removed="True" />
+        <ColumnInfo Id="group" Width="82" Removed="True" />
+        <ColumnInfo Id="health" Width="82" Removed="True" />
+        <ColumnInfo Id="labor" Width="82" Removed="True" />
+        <ColumnInfo Id="note" Width="82" Removed="True" />
+        <ColumnInfo Id="Oid" Width="82" Removed="True" />
+        <ColumnInfo Id="permanentAddress" Width="82" Removed="True" />
+        <ColumnInfo Id="photo" Width="82" Removed="True" />
+        <ColumnInfo Id="relationshipStatus" Width="82" Removed="True" />
+        <ColumnInfo Id="religion" Width="82" Removed="True" />
+        <ColumnInfo Id="temporaryAddress" Width="82" Removed="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Labors_DetailView" EnableLayoutGroupImages="True">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="23.287671232876711">
+            <LayoutGroup Id="Labors" RelativeSize="100">
+              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="Thông Tin Chung" ImageName="AlignmentTopLeft" IsNewNode="True">
+                <LayoutItem Id="name" ViewItem="name" Index="0" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="note" ViewItem="note" Index="1" RelativeSize="50" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="note" RelativeSize="23.448275862068964" Index="1" Removed="True" />
+              <LayoutItem Id="name" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Direction="Vertical" RelativeSize="24.853228962818005" Caption="Đãi Ngộ">
+            <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="Đãi Ngộ" TextAlignMode="AlignWithChildren" ImageName="BO_Appearance" IsNewNode="True">
+              <LayoutItem Id="benefits1" ViewItem="benefits" Index="0" RelativeSize="100" ShowCaption="False" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutItem Id="benefits" RelativeSize="50" Index="1" Removed="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="employees_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="51.859099804305281" ImageName="BO_Department">
+            <LayoutItem Id="employees" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Labors_employees_ListView">
+      <Columns>
+        <ColumnInfo Id="contentOfPhoto" Removed="True" />
+        <ColumnInfo Id="countryside" Removed="True" />
+        <ColumnInfo Id="group" Removed="True" />
+        <ColumnInfo Id="health" Removed="True" />
+        <ColumnInfo Id="labor" Removed="True" />
+        <ColumnInfo Id="note" Removed="True" />
+        <ColumnInfo Id="Oid" Removed="True" />
+        <ColumnInfo Id="permanentAddress" Removed="True" />
+        <ColumnInfo Id="photo" Removed="True" />
+        <ColumnInfo Id="relationshipStatus" Removed="True" />
+        <ColumnInfo Id="religion" Removed="True" />
+        <ColumnInfo Id="seniority" Removed="True" />
+        <ColumnInfo Id="temporaryAddress" Removed="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="OverTimes_DetailView" EnableLayoutGroupImages="True">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="OverTimes" Caption="Phiếu Tăng Ca" RelativeSize="100">
+              <LayoutGroup Id="OverTimes_col1" RelativeSize="50">
+                <LayoutItem Id="overtimeEmployee" RelativeSize="7.3852295409181634" />
+                <LayoutItem Id="overtimeDate" RelativeSize="5.3892215568862278" />
+                <LayoutItem Id="startTime" RelativeSize="5.1896207584830343" />
+                <LayoutItem Id="endTime" RelativeSize="5.1896207584830343" />
+                <LayoutItem Id="reason" RelativeSize="76.846307385229537" />
+              </LayoutGroup>
+              <LayoutGroup Id="OverTimes_col2" RelativeSize="50">
+                <LayoutItem Id="overtimeType" RelativeSize="7.3852295409181634" />
+                <LayoutItem Id="multiplier" RelativeSize="5.1896207584830343" />
+                <LayoutItem Id="sumOfTime" RelativeSize="5.1896207584830343" />
+                <LayoutItem Id="approver" RelativeSize="5.3892215568862278" />
+                <LayoutItem Id="approveDate" RelativeSize="76.846307385229537" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="OvertimeTypes_DetailView" EnableLayoutGroupImages="True">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="OvertimeTypes" RelativeSize="100" ImageName="BO_Scheduler">
+              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="Thông tin chung" ImageName="BO_Scheduler" IsNewNode="True">
+                <LayoutItem Id="nameOfOvertime" ViewItem="nameOfOvertime" Index="0" RelativeSize="7.18562874251497" IsNewNode="True" />
+                <LayoutItem Id="multiplier" ViewItem="multiplier" Index="1" RelativeSize="5.1896207584830343" IsNewNode="True" />
+                <LayoutItem Id="note" ViewItem="note" Index="2" RelativeSize="87.624750499001991" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="multiplier" Removed="True" />
+              <LayoutItem Id="nameOfOvertime" Removed="True" />
+              <LayoutItem Id="note" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="PermissionPolicyRoleBase_NavigationPermissions_ListView">
+      <Columns>
+        <ColumnInfo Id="ItemPath" Caption="Đường Dẫn" Width="148" />
+        <ColumnInfo Id="NavigateState" Caption="Điều hướng" Width="189" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Positions_DetailView" EnableLayoutGroupImages="True">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="27.984344422700588">
+            <LayoutGroup Id="Positions" RelativeSize="100">
+              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="95.8041958041958" Caption="Thông Tin chung" ImageName="BO_Position" IsNewNode="True">
+                <LayoutItem Id="name" ViewItem="name" Index="0" RelativeSize="36.734693877551024" IsNewNode="True" />
+                <LayoutItem Id="code" ViewItem="code" Index="1" RelativeSize="26.530612244897959" IsNewNode="True" />
+                <LayoutItem Id="note" ViewItem="note" Index="2" RelativeSize="36.734693877551024" IsNewNode="True" />
+              </LayoutGroup>
+              <SeparatorItem Id="Item3" Index="1" RelativeSize="4.1958041958041958" IsNewNode="True" />
+              <LayoutItem Id="note" RelativeSize="23.448275862068964" Index="1" Removed="True" />
+              <LayoutItem Id="code" RelativeSize="17.931034482758619" Removed="True" />
+              <LayoutItem Id="name" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="33.659491193737772" Caption="Chi Tiết Công Việc">
+            <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="96.511627906976742" Caption="Chi Tiết Công Việc" TextAlignMode="AlignWithChildren" ImageName="EditQuery" IsNewNode="True">
+              <LayoutItem Id="detail" ViewItem="detail" Index="0" RelativeSize="100" ShowCaption="False" IsNewNode="True" />
+            </LayoutGroup>
+            <SeparatorItem Id="Item4" Index="1" RelativeSize="3.4883720930232558" IsNewNode="True" />
+            <LayoutItem Id="detail" RelativeSize="100" Removed="True" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="38.356164383561641">
+            <LayoutGroup Id="emmployees" TextAlignMode="AlignWithChildren" RelativeSize="100" ImageName="BO_Department">
+              <LayoutItem Id="emmployees" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="candidates" TextAlignMode="AlignWithChildren" RelativeSize="100" ImageName="BO_MyDetails">
+              <LayoutItem Id="candidates" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Positions_emmployees_ListView">
+      <Columns>
+        <ColumnInfo Id="contentOfPhoto" Removed="True" />
+        <ColumnInfo Id="countryside" Removed="True" />
+        <ColumnInfo Id="health" Removed="True" />
+        <ColumnInfo Id="labor" Removed="True" />
+        <ColumnInfo Id="Oid" Removed="True" />
+        <ColumnInfo Id="permanentAddress" Removed="True" />
+        <ColumnInfo Id="photo" Removed="True" />
+        <ColumnInfo Id="position" Removed="True" />
+        <ColumnInfo Id="relationshipStatus" Removed="True" />
+        <ColumnInfo Id="religion" Removed="True" />
+        <ColumnInfo Id="seniority" Removed="True" />
+        <ColumnInfo Id="temporaryAddress" Removed="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Recruitments_DetailView" EnableLayoutGroupImages="True">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="26.362038664323375" ImageName="InsertField">
+            <LayoutGroup Id="Recruitments" RelativeSize="100" Caption="Thông Tin Chung" ImageName="InsertField">
+              <LayoutGroup Id="Recruitments_col1" RelativeSize="49.927849927849927">
+                <LayoutItem Id="title" RelativeSize="36" />
+                <LayoutItem Id="position" RelativeSize="27" />
+                <LayoutItem Id="deadline" ViewItem="deadline" Index="2" RelativeSize="37" IsNewNode="True" />
+                <LayoutItem Id="requireAmount" Index="3" RelativeSize="28.571428571428573" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Recruitments_col2" RelativeSize="50.072150072150073">
+                <LayoutItem Id="requireAmount" ViewItem="requireAmount" Index="0" RelativeSize="36" IsNewNode="True" />
+                <LayoutItem Id="passedAmount" RelativeSize="26" Index="1" />
+                <LayoutItem Id="note" Index="2" RelativeSize="38" />
+                <LayoutItem Id="deadline" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="45.166959578207383" Caption="SizeableEditors">
+            <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="49.027237354085607" Caption="Mô Tả Công Việc" TextAlignMode="AlignWithChildren" ImageName="BO_WorkflowDefinition" IsNewNode="True">
+              <LayoutItem Id="jobDescription" ViewItem="jobDescription" CaptionLocation="Top" Index="0" RelativeSize="100" ShowCaption="False" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Item3" ShowCaption="True" Caption="Yêu Cầu" CaptionLocation="Top" TextAlignMode="AlignWithChildren" Index="1" RelativeSize="44.747081712062254" ImageName="BO_KPI_Scorecard" IsNewNode="True">
+              <LayoutItem Id="requirement" ShowCaption="False" ViewItem="requirement" CaptionLocation="Top" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutItem Id="jobDescription" RelativeSize="48.94736842105263" CaptionLocation="Top" Removed="True" />
+            <LayoutItem Id="requirement" RelativeSize="44.651162790697676" CaptionLocation="Top" Removed="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="candidates_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="28.471001757469246" ImageName="BO_MyDetails">
+            <LayoutItem Id="candidates" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Shifts_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="31.09090909090909">
+            <LayoutGroup Id="Shifts" Caption="Thông Tin Ca" RelativeSize="100">
+              <LayoutGroup Id="Shifts_col1" RelativeSize="50">
+                <LayoutItem Id="nameOfShift" RelativeSize="29.032258064516128" />
+                <LayoutItem Id="codeOfShift" RelativeSize="20.967741935483872" />
+                <LayoutItem Id="multiplier" ViewItem="multiplier" Index="2" RelativeSize="20.967741935483872" IsNewNode="True" />
+                <LayoutItem Id="isOvernight" ViewItem="isOvernight" Index="3" RelativeSize="29.032258064516128" IsNewNode="True" />
+                <LayoutItem Id="timeOut" RelativeSize="29.032258064516128" Index="3" Removed="True" />
+                <LayoutItem Id="timeIn" RelativeSize="20.967741935483872" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Shifts_col2" RelativeSize="50">
+                <LayoutItem Id="timeIn" ViewItem="timeIn" Index="0" RelativeSize="29.032258064516128" IsNewNode="True" />
+                <LayoutItem Id="timeOut" ViewItem="timeOut" Index="1" RelativeSize="20.967741935483872" IsNewNode="True" />
+                <LayoutItem Id="addedTime" RelativeSize="20.967741935483872" Index="2" />
+                <LayoutItem Id="multiplier" RelativeSize="17.567567567567568" Index="2" Removed="True" />
+                <LayoutItem Id="isOvernight" RelativeSize="16.216216216216218" Index="3" Removed="True" />
+                <LayoutItem Id="note" RelativeSize="29.032258064516128" Index="3" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="employees_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="68.9090909090909">
+            <LayoutItem Id="employees" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Shifts_employees_ListView">
+      <Columns>
+        <ColumnInfo Id="contentOfPhoto" Removed="True" />
+        <ColumnInfo Id="countryside" Removed="True" />
+        <ColumnInfo Id="dateOfBirth" Removed="True" />
+        <ColumnInfo Id="health" Removed="True" />
+        <ColumnInfo Id="labor" Removed="True" />
+        <ColumnInfo Id="note" Removed="True" />
+        <ColumnInfo Id="Oid" Removed="True" />
+        <ColumnInfo Id="permanentAddress" Removed="True" />
+        <ColumnInfo Id="photo" Removed="True" />
+        <ColumnInfo Id="relationshipStatus" Removed="True" />
+        <ColumnInfo Id="religion" Removed="True" />
+        <ColumnInfo Id="salary" Removed="True" />
+        <ColumnInfo Id="seniority" Removed="True" />
+        <ColumnInfo Id="shift" Removed="True" />
+        <ColumnInfo Id="temporaryAddress" Removed="True" />
+        <ColumnInfo Id="vacation" Removed="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="Shifts_ListView" ImageName="BO_Opportunity">
+      <Columns>
+        <ColumnInfo Id="isOvernight" ImageForFalse="del" ImageForTrue="BO_Validation" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SystemUsers_DetailView" EnableLayoutGroupImages="True">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="29.09090909090909">
+            <LayoutGroup Id="SystemUsers" RelativeSize="100" Direction="Vertical" TextAlignMode="UseParentOptions">
+              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="Thông Tin Chung" ImageName="BO_Contact" IsNewNode="True">
+                <LayoutItem Id="employee1" ViewItem="employee" Index="0" RelativeSize="34.905660377358494" IsNewNode="True" />
+                <LayoutItem Id="UserName" ViewItem="UserName" Index="1" RelativeSize="24.528301886792452" IsNewNode="True" />
+                <LayoutGroup Id="Auto857a2f2c-7fa0-4c81-9137-d10c0df14969" ShowCaption="False" Caption="Auto857a2f2c-7fa0-4c81-9137-d10c0df14969(7)" Direction="Horizontal" Index="2" RelativeSize="40.566037735849058" TextAlignMode="AlignWithChildren" IsNewNode="True">
+                  <LayoutItem Id="IsActive" ViewItem="IsActive" Index="0" RelativeSize="49.745676500508644" IsNewNode="True" />
+                  <LayoutItem Id="ChangePasswordOnFirstLogon" ViewItem="ChangePasswordOnFirstLogon" Index="1" RelativeSize="50.254323499491356" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutItem Id="ChangePasswordOnFirstLogon" Index="1" RelativeSize="30.638297872340427" Removed="True" />
+              <LayoutItem Id="IsActive" Index="1" RelativeSize="19.574468085106382" Removed="True" />
+              <LayoutItem Id="UserName" Index="1" RelativeSize="9.787234042553191" Removed="True" />
+              <LayoutItem Id="employee" RelativeSize="15.74468085106383" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="70.9090909090909">
+            <LayoutGroup Id="EmployeeRoles" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="0" Caption="Phần Quyền Người Dùng" ImageName="BO_Role">
+              <LayoutItem Id="EmployeeRoles" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Roles" TextAlignMode="AlignWithChildren" RelativeSize="100" Removed="True">
+              <LayoutItem Id="Roles" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SystemUsers_EmployeeRoles_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Quyền Truy Cập" />
+        <ColumnInfo Id="IsAdministrative" Caption="Là Quản Trị Viên" />
+        <ColumnInfo Id="CanEditModel" Caption="Có Quyền Hiệu Chỉnh" />
+      </Columns>
+    </ListView>
+    <ListView Id="SystemUsers_ListView" MasterDetailMode="ListViewAndDetailView" ImageName="BO_Person">
+      <Columns>
+        <ColumnInfo Id="employee" Width="140" />
+        <ColumnInfo Id="UserName" Width="106" />
+        <ColumnInfo Id="IsActive" Width="130" />
+        <ColumnInfo Id="ChangePasswordOnFirstLogon" Width="125" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Vacations_DetailView" EnableLayoutGroupImages="True">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100" ImageName="BO_Category">
+            <LayoutGroup Id="Vacations" Caption="Đơn Xin Nghỉ Ngày" RelativeSize="100" ImageName="BO_Appointment">
+              <LayoutGroup Id="Vacations_col1" RelativeSize="50">
+                <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="Thông tin xin" ImageName="BO_Contract" IsNewNode="True">
+                  <LayoutItem Id="restEmployee" ViewItem="restEmployee" Index="0" RelativeSize="8.1858407079646014" IsNewNode="True" />
+                  <LayoutItem Id="restDate" ViewItem="restDate" Index="1" RelativeSize="5.9734513274336285" IsNewNode="True" />
+                  <LayoutItem Id="type" ViewItem="type" Index="2" RelativeSize="5.9734513274336285" IsNewNode="True" />
+                  <LayoutItem Id="reason" ViewItem="reason" Index="3" RelativeSize="79.86725663716814" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="createDate" RelativeSize="66.866267465069853" Removed="True" />
+                <LayoutItem Id="restDate" RelativeSize="5.3892215568862278" Removed="True" />
+                <LayoutItem Id="restEmployee" RelativeSize="7.3852295409181634" Removed="True" />
+                <LayoutItem Id="type" RelativeSize="5.3892215568862278" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Vacations_col2" RelativeSize="50">
+                <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="Duyệt Đơn" ImageName="BO_Position" IsNewNode="True">
+                  <LayoutItem Id="approveEmployee" ViewItem="approveEmployee" Index="0" RelativeSize="8.1858407079646014" IsNewNode="True" />
+                  <LayoutItem Id="createDate" ViewItem="createDate" Index="1" RelativeSize="5.9734513274336285" IsNewNode="True" />
+                  <LayoutItem Id="approveDate" ViewItem="approveDate" Index="2" RelativeSize="5.9734513274336285" IsNewNode="True" />
+                  <LayoutItem Id="note" ViewItem="note" Index="3" RelativeSize="79.86725663716814" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="approveDate" RelativeSize="5.3892215568862278" Removed="True" />
+                <LayoutItem Id="approveEmployee" RelativeSize="7.3852295409181634" Removed="True" />
+                <LayoutItem Id="note" RelativeSize="87.225548902195612" Removed="True" />
+                <LayoutItem Id="reason" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Vacations_ListView" Criteria="" />
+  </Views>
+</Application>

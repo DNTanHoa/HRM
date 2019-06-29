@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="SystemUsers_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SystemUsers">
+              <LayoutItem Id="ChangePasswordOnFirstLogon" Removed="True" />
+              <LayoutItem Id="employee" Removed="True" />
+              <LayoutItem Id="IsActive" Removed="True" />
+              <LayoutItem Id="UserName" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>
